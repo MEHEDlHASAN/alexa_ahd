@@ -1,0 +1,169 @@
+{
+    "type": "APL",
+    "version": "2022.2",
+    "settings": {},
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.5.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+  "mainTemplate": {
+                  "parameters": [
+                      "card"
+                  ],
+                  "item": {
+                      "type": "Container",
+                      "id": "cardSlideshowContainer",
+                      "width": "100%",
+                      "height": "100%",
+                      "speech": "${card.properties.preambleSpeech}",
+                      "items": [
+                          {
+                            "type": "AlexaBackground",
+                            "backgroundImageSource": "https://i.postimg.cc/jdFfx0KP/bg-1.png",
+                            "backgroundBlur": false,
+                            "colorOverlay": true,
+                            "backgroundScale": "best-fill"
+                          },
+                          {
+                          "type": "Pager",
+                          "navigation": "wrap",
+                          "id": "cardSlideshow",
+                          "numbered": true,
+                          "height": "100%",
+                          "width": "100%",
+                          "data": "${card.properties.pagerData}",
+                          "items": {
+                              "type": "Container",
+                              "direction": "col",
+                              "id": "slideContainer",
+                              "shrink": 0,
+                              "width": "100%",
+                              "height": "100%",
+                              "items": [                                  
+                                  {
+                                      "type": "Text",
+                                      "textAlign":"right",
+                                      "textAlignVertical":"bottom",
+                                      "id": "",
+                                      "text": "Last updated: ${card.properties.uploadTime}",
+                                      "color": "#ffffff",
+                                      "fontSize": "16dp",
+                                      "fontWeight": "400",
+                                      "fontFamily": "ubuntu, consolas, sans-serif",
+                                      "paddingRight": "30dp",
+                                      "paddingTop": "3dp"
+                                  },
+                                   {
+                                        "type": "AlexaHeader",
+                                        "headerTitle": "${card.properties.reportTitle}",
+                                        "headerAttributionText": "AHD",
+                                        "headerSubtitle": "${card.properties.reportSubtitle}",
+                                        "headerBackButton": true,
+                                        "headerAttributionImage": "https://i.postimg.cc/zfW55Bcf/AHDlogo.png",
+                                        "headerDivider": false,
+                                        "headerAttributionPrimacy": true
+                                    },
+                                  {
+                                   "type": "ScrollView",
+                                    "grow": 1, 
+                                    "paddingTop": "@spacingMedium",
+                                    "paddingBottom": "${@spacing3XLarge + @spacingXSmall}",
+                                    "paddingLeft": "@marginHorizontal",
+                                    "paddingRight": "@marginHorizontal",
+                                    "items": [
+                                        {
+                                          "type": "Text",
+                                          "id": "${data.id}",
+                                          "text": "${data.text}",
+                                          "speech": "${data.textSpeech}",
+                                          "color": "#ffffff",
+                                          "width": "100%",
+                                          "fontSize": "26dp",
+                                          "fontFamily": "arial, hind siliguri, sans-serif",
+                                          "fontWeight": "400",
+                                          "paddingTop": "0dp",
+                                          "paddingLeft": "20dp",
+                                          "paddingRight": "10dp"
+                                        }
+                                    ]
+                                  }
+                                
+                              ]
+                          }
+                      }]
+                  }
+              },
+  "onMount": [
+                  {
+                      "type": "Sequential",
+                      "commands": [
+                          {
+                              "type": "SpeakItem",
+                              "delay": 3000,
+                              "componentId": "cardSlideshowContainer"
+                          },
+                          {
+                              "type": "SpeakItem",
+                              "componentId": "one",
+                              "highlightMode": "line",
+                              "align": "center",
+                              "minimumDwellTime": 3000
+                          },
+                          {
+                              "type": "SetPage",
+                              "componentId": "cardSlideshow",
+                              "position": "relative",
+                              "delay": 1000,
+                              "value": 1
+                          },
+                          {
+                              "type": "SpeakItem",
+                              "componentId": "two",
+                              "highlightMode": "line",
+                              "align": "center",
+                              "minimumDwellTime": 3000
+                          },
+                          {
+                              "type": "SetPage",
+                              "componentId": "cardSlideshow",
+                              "position": "relative",
+                              "delay": 1000,
+                              "value": 1
+                          },
+                          {
+                              "type": "SpeakItem",
+                              "componentId": "three",
+                              "highlightMode": "line",
+                              "align": "center",
+                              "minimumDwellTime": 3000
+                          },
+                          {
+                              "type": "SetPage",
+                              "componentId": "cardSlideshow",
+                              "position": "relative",
+                              "delay": 1000,
+                              "value": 1
+                          },
+                          {
+                              "type": "SpeakItem",
+                              "componentId": "four",
+                              "highlightMode": "line",
+                              "align": "center"
+                          },
+                            {
+                                "type": "SetFocus",
+                                "componentId": "slideContainer",
+                              "position": "relative"
+                              }
+                      ]
+                  }
+              ]
+}

@@ -1,0 +1,449 @@
+{
+  "type": "APL",
+  "version": "2022.2",
+  "license": "Copyright 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.\nSPDX-License-Identifier: LicenseRef-.amazon.com.-AmznSL-1.0\nLicensed under the Amazon Software License  http://aws.amazon.com/asl/",
+  "theme": "dark",
+  "settings": {
+    "idleTimeout": 120000
+  },
+  "import": [
+    {
+      "name": "alexa-layouts",
+      "version": "1.5.0"
+    }
+  ],
+  "resources": [
+    {
+      "dimensions": {
+        "buttonSize": "50dp",
+        "buttonSpacing": "@spacingSmall"
+      },
+      "strings": {
+        "buttonVector1": "M 16.0625 14.144531 L 17.34375 12.832031 C 17.542969 12.628906 17.890625 12.773438 17.890625 13.066406 L 17.890625 19.03125 C 17.890625 20.117188 17.03125 21 15.972656 21 L 1.917969 21 C 0.859375 21 0 20.117188 0 19.03125 L 0 4.59375 C 0 3.507812 0.859375 2.625 1.917969 2.625 L 12.835938 2.625 C 13.121094 2.625 13.265625 2.976562 13.066406 3.1875 L 11.789062 4.5 C 11.726562 4.5625 11.648438 4.59375 11.558594 4.59375 L 1.917969 4.59375 L 1.917969 19.03125 L 15.972656 19.03125 L 15.972656 14.375 C 15.972656 14.289062 16.003906 14.207031 16.0625 14.144531 Z M 22.316406 5.871094 L 11.832031 16.640625 L 8.222656 17.050781 C 7.175781 17.167969 6.285156 16.261719 6.402344 15.179688 L 6.800781 11.472656 L 17.285156 0.703125 C 18.199219 -0.238281 19.679688 -0.238281 20.589844 0.703125 L 22.3125 2.472656 C 23.226562 3.414062 23.226562 4.933594 22.316406 5.871094 Z M 18.371094 7.136719 L 16.050781 4.753906 L 8.632812 12.378906 L 8.339844 15.058594 L 10.949219 14.757812 Z M 20.960938 3.867188 L 19.234375 2.097656 C 19.070312 1.925781 18.804688 1.925781 18.644531 2.097656 L 17.410156 3.363281 L 19.730469 5.746094 L 20.964844 4.480469 C 21.125 4.304688 21.125 4.035156 20.960938 3.867188 Z M 20.960938 3.867188 ",
+        "buttonVector2": "M 22.042969 2.625 L 4.472656 2.625 C 3.640625 2.625 2.929688 3.171875 2.664062 3.9375 L 0.957031 3.9375 C 0.429688 3.9375 0 4.378906 0 4.921875 L 0 16.078125 C 0 17.347656 1 18.375 2.234375 18.375 L 22.042969 18.375 C 22.570312 18.375 23 17.933594 23 17.390625 L 23 3.609375 C 23 3.066406 22.570312 2.625 22.042969 2.625 Z M 1.917969 16.078125 L 1.917969 5.90625 L 2.554688 5.90625 L 2.554688 16.078125 C 2.554688 16.257812 2.414062 16.40625 2.234375 16.40625 C 2.058594 16.40625 1.917969 16.257812 1.917969 16.078125 Z M 21.082031 16.40625 L 4.449219 16.40625 C 4.464844 16.300781 4.472656 16.191406 4.472656 16.078125 L 4.472656 4.59375 L 21.082031 4.59375 Z M 6.867188 11.484375 L 12.296875 11.484375 C 12.5625 11.484375 12.777344 11.265625 12.777344 10.992188 L 12.777344 7.054688 C 12.777344 6.78125 12.5625 6.5625 12.296875 6.5625 L 6.867188 6.5625 C 6.601562 6.5625 6.390625 6.78125 6.390625 7.054688 L 6.390625 10.992188 C 6.390625 11.265625 6.601562 11.484375 6.867188 11.484375 Z M 7.984375 8.203125 L 11.179688 8.203125 L 11.179688 9.84375 L 7.984375 9.84375 Z M 6.390625 13.945312 L 6.390625 12.960938 C 6.390625 12.6875 6.601562 12.46875 6.867188 12.46875 L 12.296875 12.46875 C 12.5625 12.46875 12.777344 12.6875 12.777344 12.960938 L 12.777344 13.945312 C 12.777344 14.21875 12.5625 14.4375 12.296875 14.4375 L 6.867188 14.4375 C 6.601562 14.4375 6.390625 14.21875 6.390625 13.945312 Z M 14.054688 13.945312 L 14.054688 12.960938 C 14.054688 12.6875 14.269531 12.46875 14.535156 12.46875 L 18.6875 12.46875 C 18.953125 12.46875 19.167969 12.6875 19.167969 12.960938 L 19.167969 13.945312 C 19.167969 14.21875 18.953125 14.4375 18.6875 14.4375 L 14.535156 14.4375 C 14.269531 14.4375 14.054688 14.21875 14.054688 13.945312 Z M 14.054688 8.039062 L 14.054688 7.054688 C 14.054688 6.78125 14.269531 6.5625 14.535156 6.5625 L 18.6875 6.5625 C 18.953125 6.5625 19.167969 6.78125 19.167969 7.054688 L 19.167969 8.039062 C 19.167969 8.3125 18.953125 8.53125 18.6875 8.53125 L 14.535156 8.53125 C 14.269531 8.53125 14.054688 8.3125 14.054688 8.039062 Z M 14.054688 10.992188 L 14.054688 10.007812 C 14.054688 9.734375 14.269531 9.515625 14.535156 9.515625 L 18.6875 9.515625 C 18.953125 9.515625 19.167969 9.734375 19.167969 10.007812 L 19.167969 10.992188 C 19.167969 11.265625 18.953125 11.484375 18.6875 11.484375 L 14.535156 11.484375 C 14.269531 11.484375 14.054688 11.265625 14.054688 10.992188 Z M 14.054688 10.992188",
+        "buttonVector3": "M 22.359375 18.375 L 21.722656 18.375 L 21.722656 3.9375 L 1.277344 3.9375 L 1.277344 18.375 L 0.640625 18.375 C 0.285156 18.375 0 18.667969 0 19.03125 L 0 20.34375 C 0 20.707031 0.285156 21 0.640625 21 L 7.027344 21 C 7.378906 21 7.667969 20.707031 7.667969 20.34375 L 7.667969 13.125 C 7.667969 10.949219 9.382812 9.1875 11.5 9.1875 C 13.617188 9.1875 15.332031 10.949219 15.332031 13.125 L 15.335938 19.6875 L 15.335938 20.34375 C 15.335938 20.707031 15.621094 21 15.972656 21 L 22.359375 21 C 22.714844 21 23 20.707031 23 20.34375 L 23 19.03125 C 23 18.667969 22.714844 18.375 22.359375 18.375 Z M 22.359375 0 L 0.640625 0 C 0.285156 0 0 0.292969 0 0.65625 L 0 1.96875 C 0 2.332031 0.285156 2.625 0.640625 2.625 L 22.359375 2.625 C 22.714844 2.625 23 2.332031 23 1.96875 L 23 0.65625 C 23 0.292969 22.714844 0 22.359375 0 Z M 22.359375 0",
+        "buttonVector4": "M 12 1.5 C 5.367188 1.5 0 6.867188 0 13.5 L 0 15.75 C 0 16.316406 0.320312 16.835938 0.828125 17.089844 L 1.503906 17.429688 C 1.597656 20.246094 3.910156 22.5 6.75 22.5 L 7.875 22.5 C 8.496094 22.5 9 21.996094 9 21.375 L 9 13.125 C 9 12.503906 8.496094 12 7.875 12 L 6.75 12 C 5.28125 12 3.953125 12.605469 3 13.578125 L 3 13.5 C 3 8.539062 7.039062 4.5 12 4.5 C 16.960938 4.5 21 8.539062 21 13.5 L 21 13.578125 C 20.046875 12.605469 18.71875 12 17.25 12 L 16.125 12 C 15.503906 12 15 12.503906 15 13.125 L 15 21.375 C 15 21.996094 15.503906 22.5 16.125 22.5 L 17.25 22.5 C 20.089844 22.5 22.402344 20.246094 22.496094 17.429688 L 23.171875 17.089844 C 23.679688 16.835938 24 16.316406 24 15.75 L 24 13.5 C 24 6.867188 18.632812 1.5 12 1.5 Z M 12 1.5",
+        "buttonVector5": "M 6.324219 9.5 C 7.910156 9.5 9.199219 8.167969 9.199219 6.53125 C 9.199219 4.894531 7.910156 3.5625 6.324219 3.5625 C 4.738281 3.5625 3.449219 4.894531 3.449219 6.53125 C 3.449219 8.167969 4.738281 9.5 6.324219 9.5 Z M 18.976562 4.75 L 10.925781 4.75 C 10.605469 4.75 10.351562 5.015625 10.351562 5.34375 L 10.351562 10.6875 L 2.300781 10.6875 L 2.300781 2.96875 C 2.300781 2.640625 2.042969 2.375 1.726562 2.375 L 0.574219 2.375 C 0.257812 2.375 0 2.640625 0 2.96875 L 0 16.03125 C 0 16.359375 0.257812 16.625 0.574219 16.625 L 1.726562 16.625 C 2.042969 16.625 2.300781 16.359375 2.300781 16.03125 L 2.300781 14.25 L 20.699219 14.25 L 20.699219 16.03125 C 20.699219 16.359375 20.957031 16.625 21.273438 16.625 L 22.425781 16.625 C 22.742188 16.625 23 16.359375 23 16.03125 L 23 8.90625 C 23 6.609375 21.199219 4.75 18.976562 4.75 Z M 18.976562 4.75 ",
+        "buttonVector6": "M 3.449219 8.3125 C 4.71875 8.3125 5.75 7.246094 5.75 5.9375 C 5.75 4.628906 4.71875 3.5625 3.449219 3.5625 C 2.179688 3.5625 1.148438 4.628906 1.148438 5.9375 C 1.148438 7.246094 2.179688 8.3125 3.449219 8.3125 Z M 19.550781 8.3125 C 20.820312 8.3125 21.851562 7.246094 21.851562 5.9375 C 21.851562 4.628906 20.820312 3.5625 19.550781 3.5625 C 18.28125 3.5625 17.25 4.628906 17.25 5.9375 C 17.25 7.246094 18.28125 8.3125 19.550781 8.3125 Z M 20.699219 9.5 L 18.398438 9.5 C 17.765625 9.5 17.195312 9.761719 16.777344 10.191406 C 18.226562 11.011719 19.253906 12.492188 19.476562 14.25 L 21.851562 14.25 C 22.484375 14.25 23 13.71875 23 13.0625 L 23 11.875 C 23 10.566406 21.96875 9.5 20.699219 9.5 Z M 11.5 9.5 C 13.722656 9.5 15.523438 7.640625 15.523438 5.34375 C 15.523438 3.046875 13.722656 1.1875 11.5 1.1875 C 9.277344 1.1875 7.476562 3.046875 7.476562 5.34375 C 7.476562 7.640625 9.277344 9.5 11.5 9.5 Z M 14.261719 10.6875 L 13.960938 10.6875 C 13.214844 11.058594 12.382812 11.28125 11.5 11.28125 C 10.617188 11.28125 9.789062 11.058594 9.039062 10.6875 L 8.738281 10.6875 C 6.453125 10.6875 4.601562 12.601562 4.601562 14.960938 L 4.601562 16.03125 C 4.601562 17.015625 5.371094 17.8125 6.324219 17.8125 L 16.675781 17.8125 C 17.628906 17.8125 18.398438 17.015625 18.398438 16.03125 L 18.398438 14.960938 C 18.398438 12.601562 16.546875 10.6875 14.261719 10.6875 Z M 6.222656 10.191406 C 5.804688 9.761719 5.234375 9.5 4.601562 9.5 L 2.300781 9.5 C 1.03125 9.5 0 10.566406 0 11.875 L 0 13.0625 C 0 13.71875 0.515625 14.25 1.148438 14.25 L 3.519531 14.25 C 3.746094 12.492188 4.773438 11.011719 6.222656 10.191406 Z M 6.222656 10.191406",
+        "buttonVector7": "m11.6 7.8-7.7 6.3V21c0 .4.3.7.7.7h4.7c.4 0 .7-.3.7-.7v-4c0-.4.3-.7.7-.7h2.7c.4 0 .7.3.7.7v4c0 .4.3.7.7.7h4.7c.4 0 .7-.3.7-.7v-6.8l-8-6.4c-.2-.1-.4-.1-.6 0zm12.1 4.3-3.5-2.8V3.5c0-.3-.2-.5-.5-.5h-2.3c-.3 0-.5.2-.5.5v3l-3.7-3c-.7-.6-1.8-.6-2.5 0L.1 12.1c-.2.2-.2.5-.1.7l1.1 1.3c.2.2.5.2.7.1l9.8-8.1c.2-.1.4-.1.6 0l9.8 8.1c.2.2.5.1.7-.1l1.1-1.3c.2-.2.1-.5-.1-.7z",
+        "exit2": "M11.6 0C5.2 0 0 5.2 0 11.6s5.2 11.6 11.6 11.6S23.3 18 23.3 11.6 18 0 11.6 0zm5.7 14.7c.2.2.2.6 0 .8l-1.9 1.9c-.2.2-.6.2-.8 0l-3-3.1-3.1 3.1c-.2.2-.6.2-.8 0l-1.8-1.9c-.2-.2-.2-.6 0-.8l3.1-3-3.1-3.1c-.2-.2-.2-.6 0-.8l1.9-1.9c.2-.2.6-.2.8 0l3 3.1 3.1-3.1c.2-.2.6-.2.8 0l1.9 1.9c.2.2.2.6 0 .8l-3.1 3 3.1 3.1z",
+        "sync": "M17 5.9c-1.5-1.4-3.4-2.2-5.4-2.1C8 3.8 4.9 6.2 4 9.7c-.1.2-.3.4-.6.4H.8c-.4 0-.7-.3-.6-.6C1.2 4.1 5.9 0 11.6 0c3.1 0 5.9 1.2 8 3.2l1.7-1.7c.7-.7 2-.2 2 .8v6.3c0 .6-.5 1.1-1.1 1.1h-6.3c-1 0-1.5-1.2-.8-1.9l2-2zM1.1 13.5h6.3c1 0 1.5 1.2.8 1.9l-2 2c1.5 1.4 3.4 2.1 5.4 2.1 3.6 0 6.8-2.5 7.6-5.9.1-.3.3-.4.5-.4h2.7c.4 0 .6.3.6.7-1 5.4-5.7 9.5-11.4 9.5-3.1-.1-5.9-1.4-8-3.4l-1.7 1.7c-.7.7-1.9.2-1.9-.8v-6.3c0-.6.5-1.1 1.1-1.1z",
+        "speak": "M9 4.1 5.3 7.8H1c-.6 0-1 .4-1 1v6c0 .6.4 1 1 1h4.3L9 19.5c.6.6 1.7.2 1.7-.7v-14c0-.9-1.1-1.3-1.7-.7zM18.7 2c-.5-.3-1.1-.2-1.4.3-.3.5-.2 1.1.3 1.4 2.8 1.8 4.4 4.9 4.4 8.1s-1.6 6.3-4.4 8.1c-.5.3-.6.9-.3 1.4.3.4.9.6 1.4.3 3.3-2.1 5.3-5.8 5.3-9.8S22 4.2 18.7 2zm1.3 9.8c0-2.6-1.3-5-3.6-6.5-.4-.3-1.1-.1-1.4.3s-.1 1.1.4 1.4C17 8.1 18 9.9 18 11.8s-1 3.8-2.6 4.8c-.5.3-.6 1-.4 1.4.3.4.9.6 1.4.3 2.3-1.4 3.6-3.8 3.6-6.5zm-5.9-3.2c-.5-.2-1.1-.1-1.4.4-.3.5-.1 1.1.4 1.4.5.3.9.9.9 1.5s-.3 1.2-.9 1.5c-.5.3-.7.9-.4 1.4.3.5.9.7 1.4.4 1.2-.8 1.9-2 1.9-3.4s-.7-2.5-1.9-3.2z",
+        "exit": "m23.3 12.8-7.9 7.9c-.7.7-1.9.2-1.9-.8v-4.5H7.1c-.6 0-1.1-.5-1.1-1.1V9.8c0-.7.5-1.2 1.1-1.2h6.4V4.1c0-1 1.2-1.5 1.9-.8l7.9 7.9c.4.4.4 1.2 0 1.6zM9 20.4v-1.9c0-.2-.3-.5-.6-.5H4.5c-.8 0-1.5-.7-1.5-1.5v-9C3 6.7 3.7 6 4.5 6h3.9c.3 0 .6-.3.6-.6V3.6c0-.3-.3-.6-.6-.6H4.5C2 3 0 5 0 7.5v9C0 19 2 21 4.5 21h3.9c.3 0 .6-.3.6-.6z"
+      }
+    }
+  ],
+  "layouts": {
+    "AlexaImageList": {
+      "parameters": [
+        {
+          "name": "theme",
+          "description": "Colors will be swiched depend on the specified theme (light/dark). Default to dark theme",
+          "type": "string",
+          "default": "dark"
+        },
+        {
+          "name": "headerAttributionOpacity",
+          "type": "number",
+          "default": "${@viewportProfileCategory == @hubRound ? 1 : @opacitySecondary}"
+        },
+        {
+          "name": "headerTitle",
+          "description": "Primary text to render in header.",
+          "type": "string"
+        },
+        {
+          "name": "headerSubtitle",
+          "description": "Primary text to render in header subtitle.",
+          "type": "string"
+        },
+        {
+          "name": "headerAttributionText",
+          "description": "Attribution text to render in header. Only shown when no headerAttributionImage is provided, and when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.",
+          "type": "string"
+        },
+        {
+          "name": "headerAttributionImage",
+          "description": "URL for attribution image source. Only shown when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.",
+          "type": "string"
+        },
+        {
+          "name": "headerAttributionPrimacy",
+          "description": "On devices that can only display one element due to screen size, Attribution is prioritized. Setting False displays Title/Subtitle.  Defaults to true.",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "headerDivider",
+          "description": "Toggle to display the divider that appears at the bottom of header to help separate it from the content below. Default to false",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "headerBackButton",
+          "description": "Toggle to display back button in header. Defaults to false.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "headerBackButtonAccessibilityLabel",
+          "description": "An accessibility label to describe the back button to customers who use a screen reader.",
+          "type": "string"
+        },
+        {
+          "name": "headerBackButtonCommand",
+          "description": "Command that is issued when back button is pressed.",
+          "type": "any",
+          "default": {
+            "type": "SendEvent",
+            "arguments": [
+              "goBack"
+            ]
+          }
+        },
+        {
+          "name": "exitBtnCommand",
+          "description": "Command that is issued when exit button is pressed.",
+          "type": "any",
+          "default": {
+            "type": "SendEvent",
+            "arguments": [
+              "exit"
+            ]
+          }
+        },
+        {
+          "name": "exitBtn",
+          "description": "Toggle to display back button in header. Defaults to false.",
+          "type": "any"
+        },
+        {
+          "name": "headerBackgroundColor",
+          "description": "Optional color value to use as background color for Header. Defaults to transparent.",
+          "type": "color",
+          "default": "transparent"
+        },
+        {
+          "name": "hintText",
+          "type": "string",
+          "description": "Hint text to display in Footer."
+        },
+        {
+          "name": "backgroundColor",
+          "description": "Color value to use as background color for layout.",
+          "type": "color"
+        },
+        {
+          "name": "backgroundImageSource",
+          "description": "URL for background image source.",
+          "type": "string"
+        },
+        {
+          "name": "backgroundVideoSource",
+          "description": "URL for background video source.",
+          "type": "any"
+        },
+        {
+          "name": "backgroundScale",
+          "description": "Image/video scale to apply to background image/video. Defaults to best-fill.",
+          "type": "string",
+          "default": "best-fill"
+        },
+        {
+          "name": "backgroundAlign",
+          "description": "Image/video alignment to apply to background image/video. Defaults to center.",
+          "type": "string",
+          "align": "center"
+        },
+        {
+          "name": "backgroundBlur",
+          "description": "Toggle to apply background blur. Defaults to false.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "backgroundColorOverlay",
+          "description": "Toggle to apply overlay scrim to background image/video. Defaults to false.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "backgroundOverlayGradient",
+          "description": "Toggle to apply gradient to background image/video. Defaults to false.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "videoAutoPlay",
+          "description": "Toggle to autoplay background video(s). Defaults to false.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "videoAudioTrack",
+          "description": "Audio track to play on. Defaults to foreground. EM can select foreground | background | none.",
+          "type": "string",
+          "default": "foreground"
+        },
+        {
+          "name": "listItems",
+          "description": "The Items will be displayed in the list.",
+          "type": "array"
+        },
+        {
+          "name": "imageMetadataPrimacy",
+          "description": "ImageMetadataPrimacy on devices that can only display one element due to screen size, Image's secondary and tertiary text is prioritized over hint text. Setting false displays hint text. Defaults to true",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "hideOrdinal",
+          "description": "Toggle to hide ordinal in list item. Defaults to false.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "imageHideScrim",
+          "description": "Toggle to hide the overlay (scrim) between image and content to increase content readability. Defaults to false.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "imageHeight",
+          "description": "Dimension value to set image height",
+          "type": "dimension"
+        },
+        {
+          "name": "imageAspectRatio",
+          "description": "Aspect ratio of the image. Options are square, round, standard_landscape, standard_portrait, poster_landscape, poster_portrait, widescreen. Default to square",
+          "type": "string",
+          "default": "square"
+        },
+        {
+          "name": "imageScale",
+          "description": "Scale setting for the image. Options are none, fill, best-fit, best-fill, best-fit-down. Default to best-fit",
+          "type": "string",
+          "default": "best-fit"
+        },
+        {
+          "name": "imageAlignment",
+          "description": "Alignment setting for the image. Options are bottom, bottom-left, bottom-right, center, left, right, top, top-left, top-right. Default to center",
+          "type": "string",
+          "default": "center"
+        },
+        {
+          "name": "imageRoundedCorner",
+          "description": "Whether to use rounded corners for the image",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "imageBlurredBackground",
+          "description": "Set a blurred version of the image to appear behind the image to create a visually consistent container size",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "imageShowProgressBar",
+          "description": "Toggle to display the progress bar on the image overlay. The progress bar will be displayed if imageProgressBarPercentage parameter is defined. Defaults to true.",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "defaultImageSource",
+          "description": "URI for the default image on the list item so the image containers are never empty",
+          "type": "string"
+        },
+        {
+          "name": "primaryAction",
+          "description": "The action that is triggered when the item is selected.",
+          "type": "any"
+        },
+        {
+          "name": "entities",
+          "description": "Array of entity data bind to this layout",
+          "type": "any"
+        },
+        {
+          "name": "listId",
+          "type": "string",
+          "description": "The component id for the scrolling list in this layout"
+        },
+        {
+          "name": "speechItems",
+          "description": "Array of speech items",
+          "type": "any"
+        },
+        {
+          "name": "imageShadow",
+          "description": "Boolean to turn the drop shadow on or off on the image",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "items": [
+        {
+          "type": "Container",
+          "width": "100%",
+          "height": "100%",
+          "entities": "${entities}",
+          "items": [
+            {
+              "type": "AlexaBackground",
+              "backgroundColor": "${backgroundColor}",
+              "backgroundImageSource": "${backgroundImageSource}",
+              "backgroundVideoSource": "${backgroundVideoSource}",
+              "backgroundScale": "${backgroundScale}",
+              "backgroundAlign": "${backgroundAlign}",
+              "backgroundBlur": "${backgroundBlur}",
+              "colorOverlay": "${backgroundColorOverlay}",
+              "overlayGradient": "${backgroundOverlayGradient}",
+              "videoAutoPlay": "${backgroundVideoAutoPlay}",
+              "videoAudioTrack": "${backgroundVideoAudioTrack}"
+            },
+            {
+              "type": "AlexaHeader",
+              "position": "${@viewportProfile == @tvLandscapeOverlay ? 'absolute' : 'relative'}",
+              "width": "100%",
+              "theme": "${theme}",
+              "headerTitle": "${headerTitle}",
+              "headerSubtitle": "${headerSubtitle}",
+              "headerAttributionText": "${headerAttributionText}",
+              "headerAttributionImage": "${headerAttributionImage}",
+              "headerAttributionPrimacy": "${headerAttributionPrimacy}",
+              "headerDivider": "${headerDivider && @viewportProfile != @tvLandscapeOverlay}",
+              "headerBackButton": "${headerBackButton}",
+              "headerBackButtonCommand": "${headerBackButtonCommand}",
+              "headerBackgroundColor": "${headerBackgroundColor}",
+              "headerAttributionOpacity": "${headerAttributionOpacity}"
+            },
+            {
+              "type": "Container",
+              "height": "100vh",
+              "justifyContent": "${(@viewportProfile == @hubRoundSmall || @viewportProfile == @hubLandscapeSmall || @viewportProfile == @tvLandscapeOverlay) ? 'start' : 'center'}",
+              "top": "${@viewportProfile == @tvLandscapeOverlay ? '50dp' : 'auto'}",
+              "width": "100%",
+              "shrink": "1",
+              "paddingBottom": "0",
+              "items": [
+                {
+                  "type": "Sequence",
+                  "alignSelf": "center",
+                  "data": "${listItems}",
+                  "id": "${listId}",
+                  "scrollDirection": "horizontal",
+                  "paddingLeft": "${@marginHorizontal - @spacingXSmall}",
+                  "paddingRight": "${@marginHorizontal - @spacingXSmall}",
+                  "width": "100%",
+                  "height": "auto",
+                  "shrink": "1",
+                  "numbered": true,
+                  "item": [
+                    {
+                      "type": "AlexaImageListItem",
+                      "alignSelf": "center",
+                      "theme": "${theme}",
+                      "hideOrdinal": "${hideOrdinal}",
+                      "primaryText": "${data.primaryText}",
+                      "secondaryText": "${data.secondaryText}",
+                      "tertiaryText": "${payload.reportData.last_updated}",
+                      "ratingSlotMode": "${data.ratingSlotMode}",
+                      "ratingGraphicType": "${data.ratingGraphicType}",
+                      "singleRatingGraphicWidth": "${data.singleRatingGraphicWidth}",
+                      "ratingNumber": "${data.ratingNumber}",
+                      "singleRatingGraphic": "${data.singleRatingGraphic}",
+                      "fullRatingGraphic": "${data.fullRatingGraphic}",
+                      "halfRatingGraphic": "${data.halfRatingGraphic}",
+                      "emptyRatingGraphic": "${data.emptyRatingGraphic}",
+                      "ratingText": "${data.ratingText}",
+                      "hasPlayIcon": "${data.hasPlayIcon}",
+                      "providerText": "${data.providerText}",
+                      "imageSource": "${data.imageSource ? data.imageSource : defaultImageSource}",
+                      "imageProgressBarPercentage": "${data.imageProgressBarPercentage}",
+                      "imageShowProgressBar": "${data.imageShowProgressBar ? data.imageShowProgressBar : imageShowProgressBar}",
+                      "imageHideScrim": "${data.imageHideScrim ? data.imageHideScrim : imageHideScrim}",
+                      "imageRoundedCorner": "${data.imageRoundedCorner ? data.imageRoundedCorner : imageRoundedCorner}",
+                      "imageScale": "${data.imageScale ? data.imageScale : imageScale}",
+                      "imageAlignment": "${data.imageAlignment ? data.imageAlignment : imageAlignment}",
+                      "imageAspectRatio": "${imageAspectRatio}",
+                      "imageBlurredBackground": "${data.imageBlurredBackground ? data.imageBlurredBackground : imageBlurredBackground}",
+                      "disabled": "${data.disabled}",
+                      "imageMetadataPrimacy": "${imageMetadataPrimacy}",
+                      "imageShadow": "${data.imageShadow ? data.imageShadow : imageShadow}",
+                      "primaryAction": "${data.primaryAction ? data.primaryAction : primaryAction}",
+                      "speech": "${speechItems[index].speech}",
+                      "entities": "${data.entities ? data.entities : entities}",
+                      "shadowColor": "transparent",
+                      "shadowRadius": "80dp",
+                      "shadowVerticalOffset": "0dp"
+                    }
+                  ]
+                },
+                {
+                  "type": "Container",
+                  "width": "100vw",
+                  "direction": "row",
+                  "alignItems": "end",
+                  "paddingRight": "5vh",
+                  "paddingBottom": "3vh",
+                  "justifyContent": "end",
+                  "items": [
+                    {
+                      "spacing": "@buttonSpacing",
+                      "id": "exitBtn",
+                      "type": "AlexaIconButton",
+                      "buttonSize": "@buttonSize",
+                      "vectorSource": "@exit",
+                      "buttonStyle": "contained",
+                      "display": "true",
+                      "accessibilityLabel": "exit button",
+                      "primaryAction": [
+                        {
+                          "type": "SendEvent",
+                          "arguments": [
+                            "exitButton"
+                          ]
+                        },
+                        {
+                          "type": "SetValue",
+                          "componentId": "exitBtn",
+                          "property": "display",
+                          "value": "none"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "items": [
+      {
+        "type": "AlexaImageList",
+        "id": "reportList",
+        "headerTitle": "${payload.reportData.title}",
+        "headerSubtitle": "${payload.reportData.headerSubtitle}",
+        "headerBackButton": "${payload.reportData.headerBackButton}",
+        "headerDivider": false,
+        "headerAttributionImage": "${payload.reportData.logoUrl}",
+        "backgroundImageSource": "${payload.reportData.backgroundImage.sources[0].url}",
+        "backgroundBlur": false,
+        "backgroundColorOverlay": false,
+        "imageAspectRatio": "square",
+        "imageMetadataPrimacy": true,
+        "imageScale": "best-fill",
+        "listItems": "${payload.reportData.listItems}",
+        "hintText": "${payload.reportData.hintText}",
+        "theme": "dark"
+      }
+    ]
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "sales report",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "RegistrationIntent",
+          "slots": [],
+          "samples": [
+            "link account",
+            "sign me up",
+            "sign up",
+            "register me"
+          ]
+        },
+        {
+          "name": "ChartIntent",
+          "slots": [],
+          "samples": [
+            "show me chart",
+            "chart",
+            "sales chart"
+          ]
+        },
+        {
+          "name": "LiveSummaryIntent",
+          "slots": [],
+          "samples": [
+            "todays sales report"
+          ]
+        },
+        {
+          "name": "YesterdaySummaryIntent",
+          "slots": [],
+          "samples": [
+            "yesterday"
+          ]
+        },
+        {
+          "name": "MTDSummaryIntent",
+          "slots": [],
+          "samples": [
+            "mtd"
+          ]
+        },
+        {
+          "name": "EndSession",
+          "slots": [],
+          "samples": [
+            "stop",
+            "exit",
+            "please stop",
+            "quit"
+          ]
+        },
+        {
+          "name": "lastUpdatedIntent",
+          "slots": [],
+          "samples": [
+            "last update",
+            "data got updated",
+            "last update time",
+            "last data update time",
+            "data refreshed",
+            "updated on",
+            "when did the data was last updated",
+            "last updated"
+          ]
+        },
+        {
+          "name": "backToHomeIntent",
+          "slots": [],
+          "samples": [
+            "back to home",
+            "go to homepage",
+            "homepage",
+            "take me to home",
+            "resume"
+          ]
+        },
+        {
+          "name": "PauseSession",
+          "slots": [],
+          "samples": [
+            "pause",
+            "wait",
+            "quiet"
+          ]
+        },
+        {
+          "name": "MobileReportIntent",
+          "slots": [],
+          "samples": [
+            "mobile report",
+            "a. h. d. mobile report",
+            "mobile"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "RreportHomeIntent",
+          "slots": [
+            {
+              "name": "report_consent",
+              "type": "report_consent",
+              "samples": [
+                "{report_consent}",
+                "no",
+                "yes"
+              ]
+            }
+          ],
+          "samples": [
+            "{report_consent}"
+          ]
+        },
+        {
+          "name": "HomeIntent",
+          "slots": [],
+          "samples": [
+            "back to home",
+            "report homepage",
+            "go back",
+            "go home",
+            "home"
+          ]
+        },
+        {
+          "name": "INST_DASHBOARD",
+          "slots": [],
+          "samples": [
+            "report two"
+          ]
+        },
+        {
+          "name": "TDCL_DASHBOARD",
+          "slots": [],
+          "samples": [
+            "report one"
+          ]
+        },
+        {
+          "name": "INST_LIVE",
+          "slots": [],
+          "samples": [
+            "institute live sales"
+          ]
+        },
+        {
+          "name": "INST_YESTERDAY",
+          "slots": [],
+          "samples": [
+            "institution yesterday sales"
+          ]
+        },
+        {
+          "name": "INST_MTD",
+          "slots": [],
+          "samples": [
+            "institution mtd sales"
+          ]
+        },
+        {
+          "name": "TDCL_MTD",
+          "slots": [],
+          "samples": [
+            "tdcl mtd sales"
+          ]
+        },
+        {
+          "name": "TDCL_LIVE",
+          "slots": [],
+          "samples": [
+            "tdcl live sales"
+          ]
+        },
+        {
+          "name": "TDCL_YESTERDAY",
+          "slots": [],
+          "samples": [
+            "tdcl yesterday sales"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "sure"
+              }
+            },
+            {
+              "name": {
+                "value": "okay"
+              }
+            },
+            {
+              "name": {
+                "value": "no"
+              }
+            },
+            {
+              "name": {
+                "value": "yes"
+              }
+            }
+          ],
+          "name": "report_consent"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "two"
+              }
+            },
+            {
+              "name": {
+                "value": "one"
+              }
+            }
+          ],
+          "name": "report_segment"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "RreportHomeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "report_consent",
+              "type": "report_consent",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.634158505784.1572053416020"
+              }
+            }
+          ]
+        },
+        {
+          "name": "HomeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": []
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.634158505784.1572053416020",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Would you like to open a. h. d. report?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "3"
+}

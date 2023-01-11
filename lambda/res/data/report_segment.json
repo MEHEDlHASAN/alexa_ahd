@@ -1,0 +1,65 @@
+{
+  "reportData": {
+    "type": "object",
+    "objectId": "imageListSample",
+    "backgroundImage": {
+      "contentDescription": null,
+      "smallSourceUrl": null,
+      "largeSourceUrl": null,
+      "sources": [
+        {
+          "url": "https://i.postimg.cc/jdFfx0KP/bg-1.png",
+          "size": "large"
+        }
+      ]
+    },
+    "title": "REPORT SEGMENT",
+    "headerSubtitle": "AHD (SK+F)",
+    "headerBackButton": true,
+    "last_updated": "",
+    "listItems": [
+      {
+        "primaryText": "TDCL",
+        "secondaryText": "REPORT",
+        "tertiaryText": "",
+        "imageSource": "https://i.postimg.cc/5XxNXMdN/Thumbnail-TDCL.png",
+        "primaryAction": [
+          {
+            "type": "SetValue",
+            "componentId": "reportList",
+            "property": "headerSubtitle",
+            "value": "${payload.reportData.listItems[0].primaryText} is selected"
+          },
+          {
+            "type": "SendEvent",
+            "arguments": [
+              "TDCL_SEG"
+            ]
+          }
+        ]
+      },
+      {
+        "primaryText": "INSTITUTION",
+        "secondaryText": "REPORT",
+        "tertiaryText": "",
+        "imageSource": "https://i.postimg.cc/w10xJbg5/Thumbnail-INST.png",
+        "primaryAction": [
+          {
+            "type": "SetValue",
+            "componentId": "reportList",
+            "property": "headerSubtitle",
+            "value": "${payload.reportData.listItems[1].primaryText} is selected"
+          },
+          {
+            "type": "SendEvent",
+            "arguments": [
+              "INST_SEG"
+            ]
+          }
+        ]
+      }
+    ],
+    "logoUrl": "https://i.postimg.cc/52j2t6p2/AHDlogo.png",
+    "hintText": "Try, \"Alexa, report 1, 2 or 3\""
+  }
+}

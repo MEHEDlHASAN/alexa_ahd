@@ -1,0 +1,69 @@
+{
+  "type": "APLA",
+  "version": "0.8",
+  "description": "This document contains the response when a user wants to see latest news.",
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "item": {
+      "type": "Sequencer",
+      "items": [
+        {
+          "type": "Speech",
+          "contentType": "SSML",
+          "content": "<speak>Welcome!</speak>"
+        },
+        {
+          "type": "Mixer",
+          "items": [
+            {
+              "type": "Audio",
+              "description": "Background music",
+              "source": "https://veoxmbq.s3.amazonaws.com/pet-tales/assets/audio/shop-music-2.mp3"
+            },
+            {
+              "type": "Sequencer",
+              "description": "Sequential News",
+              "items": [
+                {
+                  "type": "Speech",
+                  "contentType": "SSML",
+                  "content": "${payload.card.pagerData[0].pageText}"
+                },
+                {
+                  "type": "Speech",
+                  "contentType": "SSML",
+                  "content": "${payload.card.pagerData[1].pageText}"
+                },
+                {
+                  "type": "Speech",
+                  "contentType": "SSML",
+                  "content": "${payload.card.pagerData[3].pageText}"
+                },
+                {
+                  "type": "Speech",
+                  "contentType": "SSML",
+                  "content": "${payload.card.pagerData[4].pageText}"
+                }
+              ]
+            },
+            {
+              "type": "Sequencer",
+              "description": "Plays last Sequencer",
+              "data": "https://veoxmbq.s3.amazonaws.com/pet-tales/assets/audio/shop-music-2.mp3",
+              "item": {
+                "type": "Audio",
+                "source": "${data}",
+                "filter": {
+                  "type": "Volume",
+                  "amount": "50%"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+    "headlineTemplateData": {
+        "type": "object",
+        "objectId": "headlineSample",
+        "properties": {
+            "backgroundImage": {
+                "contentDescription": null,
+                "smallSourceUrl": null,
+                "largeSourceUrl": null,
+                "sources": [
+                    {
+                        "url": "",
+                        "size": "small",
+                        "widthPixels": 0,
+                        "heightPixels": 0
+                    },
+                    {
+                        "url": "",
+                        "size": "large",
+                        "widthPixels": 0,
+                        "heightPixels": 0
+                    }
+                ]
+            },
+            "textContent": {
+                "primaryText": {
+                    "type": "PlainText",
+                    "text": ""
+                },
+                "secondaryText": {
+                    "type": "PlainText",
+                    "text": ""
+                }
+            },
+            "logoUrl": "",
+            "hintText": "",
+            "welcomeSpeechSSML": "<speak><voice name='Emma'><amazon:emotion name='disappointed' intensity='medium'></amazon:emotion></voice></speak>"
+        },
+        "transformers": [
+            {
+                "inputPath": "welcomeSpeechSSML",
+                "transformer": "ssmlToSpeech",
+                "outputName": "welcomeSpeech"
+            }
+        ]
+    }
+}

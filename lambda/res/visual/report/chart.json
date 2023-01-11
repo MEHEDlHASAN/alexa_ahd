@@ -1,0 +1,297 @@
+{
+    "type": "APL",
+    "version": "2022.2",
+    "settings": {},
+    "theme": "light",
+    "import": [
+      {
+        "name": "alexa-layouts",
+        "version": "1.5.0"
+      }
+    ],
+    "resources": [
+      {
+        "dimensions": {
+          "dataLabelTextSize": "${viewport.height * 0.04}",
+          "xTextSize": "${viewport.height * 0.05}",
+          "yTextSize": "${viewport.height * 0.03}"
+        }
+      }
+    ],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {
+      "BarChart": {
+        "parameters": [
+          "chartWidth",
+          "chartHeight",
+          "data",
+          "maxY",
+          "yTick",
+          "showDataLabels",
+          "xLabels",
+          "barColor"
+        ],
+        "items": [
+          {
+            "type": "Container",
+            "alignItems": "center",
+            "bind": [
+              {
+                "name": "columnWidth",
+                "value": "${chartWidth / data.length}"
+              },
+              {
+                "name": "barWidthUnit",
+                "value": "${columnWidth / 10}"
+              },
+              {
+                "name": "barHeightUnit",
+                "value": "${ chartHeight / maxY / 10 * 0.9}"
+              },
+              {
+                "name": "rowHeight",
+                "value": "${barHeightUnit * 10 * yTick}"
+              }
+            ],
+            "items": [
+              {
+                "type": "Container",
+                "direction": "row",
+                "items": [
+                  {
+                    "when": "${maxY <= yTick * 10}",
+                    "type": "Container",
+                    "justifyContent": "end",
+                    "data": [
+                      "${yTick * 10}",
+                      "${yTick * 9}",
+                      "${yTick * 8}",
+                      "${yTick * 7}",
+                      "${yTick * 6}",
+                      "${yTick * 5}",
+                      "${yTick * 4}",
+                      "${yTick * 3}",
+                      "${yTick * 2}",
+                      "${yTick * 1}"
+                    ],
+                    "items": [
+                      {
+                        "when": "${data <= maxY * 10 / 9}",
+                        "type": "Text",
+                        "id": "xLabel${index}",
+                        "height": "${rowHeight}",
+                        "width": "${columnWidth/2}",
+                        "textAlign": "right",
+                        "right": "10dp",
+                        "fontSize": "@yTextSize",
+                        "text": "<span color='black'><b>${data} M</b></span>",
+                        "transform": [
+                          {
+                            "translateY": -10
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Container",
+                    "items": [
+                      {
+                        "type": "Container",
+                        "width": "${chartWidth}",
+                        "height": "${chartHeight}",
+                        "items": [
+                          {
+                            "type": "Container",
+                            "width": "100%",
+                            "height": "100%",
+                            "position": "absolute",
+                            "justifyContent": "end",
+                            "data": [
+                              "dummy0",
+                              "dummy1",
+                              "dummy2",
+                              "dummy3",
+                              "dummy4",
+                              "dummy5",
+                              "dummy6",
+                              "dummy7",
+                              "dummy8",
+                              "dummy9"
+                            ],
+                            "items": [
+                              {
+                                "type": "Frame",
+                                "width": "100%",
+                                "borderColor": "#cccccc",
+                                "borderWidth": 1,
+                                "height": "${rowHeight}"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Frame",
+                            "width": "100%",
+                            "height": "100%",
+                            "borderColor": "#cccccc",
+                            "borderWidth": 1,
+                            "items": [
+                              {
+                                "type": "Container",
+                                "width": "100%",
+                                "height": "100%",
+                                "direction": "row",
+                                "data": "${data}",
+                                "items": [
+                                  {
+                                    "type": "Container",
+                                    "bind": [
+                                      {
+                                        "name": "barHeight",
+                                        "value": "${data * barHeightUnit * 10}"
+                                      },
+                                      {
+                                        "name": "barWidth",
+                                        "value": "${barWidthUnit * 6}"
+                                      },
+                                      {
+                                        "name": "barIndex",
+                                        "value": "${index}"
+                                      }
+                                    ],
+                                    "justifyContent": "end",
+                                    "paddingLeft": "${barWidthUnit * 2}",
+                                    "paddingRight": "${barWidthUnit * 2}",
+                                    "items": [
+                                      {
+                                        "when": "${showDataLabels}",
+                                        "type": "Text",
+                                        "id": "barLabel${barIndex}",
+                                        "opacity": 0,
+                                        "width": "${barWidth}",
+                                        "textAlign": "center",
+                                        "text": "<span color='black'><b>${data} M</b></span>",
+                                        "fontSize": "@dataLabelTextSize"
+                                      },
+                                      {
+                                        "type": "Frame",
+                                        "id": "bar${barIndex}",
+                                        "backgroundColor": "${barColor}",
+                                        "height": "${barHeight}",
+                                        "width": "${barWidth}",
+                                        "onMount": [
+                                          {
+                                            "type": "AnimateItem",
+                                            "easing": "ease-in-out",
+                                            "componentId": "bar${barIndex}",
+                                            "duration": 1000,
+                                            "value": [
+                                              {
+                                                "property": "transform",
+                                                "from": [
+                                                  {
+                                                    "translateY": "${barHeight/2}"
+                                                  },
+                                                  {
+                                                    "scaleY": 0
+                                                  }
+                                                ],
+                                                "to": [
+                                                  {
+                                                    "translateY": "0"
+                                                  },
+                                                  {
+                                                    "scaleY": 1
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "type": "AnimateItem",
+                                            "componentId": "barLabel${barIndex}",
+                                            "duration": 500,
+                                            "value": [
+                                              {
+                                                "property": "opacity",
+                                                "from": 0,
+                                                "to": 1
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "when": "${maxY  < yTick * 10 / 9}}",
+                    "type": "Container",
+                    "height": "${rowHeight}",
+                    "width": "${columnWidth/2}"
+                  }
+                ]
+              },
+              {
+                "when": "${xLabels.length == data.length}",
+                "type": "Container",
+                "direction": "row",
+                "data": "${xLabels}",
+                "items": [
+                  {
+                    "type": "Text",
+                    "id": "xLabel${index}",
+                    "width": "${columnWidth}",
+                    "textAlign": "center",
+                    "fontSize": "@xTextSize",
+                    "text": "${data}"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "mainTemplate": {
+      "parameters": [
+        "aplData"
+      ],
+      "items": [
+        {
+          "type": "Container",
+          "width": "100%",
+          "height": "100%",
+          "items": [
+            {
+              "type": "AlexaBackground",
+              "backgroundColor": "#fafafa"
+            },
+            {
+              "type": "BarChart",
+              "chartWidth": "${viewport.width * 0.8}",
+              "chartHeight": "${viewport.height * 0.8}",
+              "maxY": "${aplData.maxY}",
+              "yTick": "${aplData.yTick}",
+              "data": "${aplData.data}",
+              "showDataLabels": true,
+              "xLabels": "${aplData.xLabels}",
+              "barColor": "${aplData.barColor}"
+            }
+          ],
+          "alignItems": "center",
+          "justifyContent": "center"
+        }
+      ]
+    }
+  }

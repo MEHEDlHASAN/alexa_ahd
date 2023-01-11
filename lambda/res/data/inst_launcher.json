@@ -1,0 +1,105 @@
+{
+  "reportData": {
+    "type": "object",
+    "objectId": "imageListSample",
+    "backgroundImage": {
+      "contentDescription": null,
+      "smallSourceUrl": null,
+      "largeSourceUrl": null,
+      "sources": [
+        {
+          "url": "https://i.postimg.cc/jdFfx0KP/bg-1.png",
+          "size": "large"
+        }
+      ]
+    },
+    "title": "INST Sales Report",
+    "headerSubtitle": "AHD (SK+F)",
+    "headerBackButton": true,
+    "last_updated": "",
+    "listItems": [
+      {
+        "primaryText": "Sales Analysis Live",
+        "secondaryText": "INST",
+        "tertiaryText": "",
+        "imageSource": "https://i.postimg.cc/y8xTjy6X/Thumbnail1.png",
+        "primaryAction": [
+          {
+            "type": "SetValue",
+            "componentId": "reportList",
+            "property": "headerSubtitle",
+            "value": "${payload.reportData.listItems[0].primaryText} is selected"
+          },
+          {
+            "type": "SendEvent",
+            "arguments": [
+              "INST_LIVE"
+            ]
+          }
+        ]
+      },
+      {
+        "primaryText": "Sales Analysis Yesterday",
+        "secondaryText": "INST",
+        "tertiaryText": "",
+        "imageSource": "https://i.postimg.cc/HxD4pGwB/Thumbnail2.png",
+        "primaryAction": [
+          {
+            "type": "SetValue",
+            "componentId": "reportList",
+            "property": "headerSubtitle",
+            "value": "${payload.reportData.listItems[1].primaryText} is selected"
+          },
+          {
+            "type": "SendEvent",
+            "arguments": [
+              "INST_YESTERDAY"
+            ]
+          }
+        ]
+      },
+      {
+        "primaryText": "MTD Sales Analysis",
+        "secondaryText": "INST",
+        "tertiaryText": "",
+        "imageSource": "https://i.postimg.cc/tgVNQRxs/Thumbnail3.png",
+        "primaryAction": [
+          {
+            "type": "SetValue",
+            "componentId": "reportList",
+            "property": "headerSubtitle",
+            "value": "${payload.reportData.listItems[2].primaryText} is selected"
+          },
+          {
+            "type": "SendEvent",
+            "arguments": [
+              "INST_MTD"
+            ]
+          }
+        ]
+      },
+      {
+        "primaryText": "Yesterday's Sales (Chart)",
+        "secondaryText": "INST",
+        "tertiaryText": "",
+        "imageSource": "https://i.postimg.cc/mDY3kdVR/RnDChart.jpg",
+        "primaryAction": [
+          {
+            "type": "SetValue",
+            "componentId": "reportList",
+            "property": "headerSubtitle",
+            "value": "${payload.reportData.listItems[3].primaryText} is selected"
+          },
+          {
+            "type": "SendEvent",
+            "arguments": [
+              "chartTouchEvent"
+            ]
+          }
+        ]
+      }
+    ],
+    "logoUrl": "https://i.postimg.cc/52j2t6p2/AHDlogo.png",
+    "hintText": "Try, \"Alexa, report 1, 2 or 3\""
+  }
+}

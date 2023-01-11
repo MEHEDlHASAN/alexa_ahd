@@ -1,0 +1,35 @@
+{
+    "headlineTemplateData": {
+        "type": "object",
+        "objectId": "headlineSample",
+        "properties": {
+            "backgroundImage": {
+                "contentDescription": null,
+                "smallSourceUrl": null,
+                "largeSourceUrl": null,
+                "sources": [
+                    {
+                        "url": "https://ahds3.s3.amazonaws.com/ahd/ahdreport/resource/img/pause.jpg",
+                        "size": "large"
+                    }
+                ]
+            },
+            "textContent": {
+                "primaryText": {
+                    "type": "PlainText",
+                    "text": "⏸ <br>Paused"
+                }
+            },
+            "logoUrl": "",
+            "hintText": "",
+            "welcomeSpeechSSML": "<speak><amazon:emotion name='excited' intensity='low'>Paused</amazon:emotion></speak>"
+        },
+        "transformers": [
+            {
+                "inputPath": "welcomeSpeechSSML",
+                "transformer": "ssmlToSpeech",
+                "outputName": "welcomeSpeech"
+            }
+        ]
+    }
+}
